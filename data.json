@@ -1,0 +1,162 @@
+{
+    "burgers": [
+        {
+            "title": "Beef Burger",
+            "priceM": 2.19,
+            "priceV": 4.19,
+            "ingredients": [
+                "100% beef",
+                " beef burger patty",
+                " sesame seed bun",
+                " pickles",
+                " ketchup",
+                " mayonnaise",
+                " tomatoes",
+                " white onions",
+                " lettuce"
+            ],
+            "src": "./img/beef-burger.png"
+        },
+        {
+            "title": "Grilled King Burger",
+            "priceM": 3.89,
+            "priceV": 5.89,
+            "ingredients": [
+                "100% beef",
+                " grilled beef patties",
+                " sesame seed bun",
+                " pickles",
+                " tomatoes",
+                " onions",
+                " iceberg lettuce"
+            ],
+            "src": "./img/grilled-king-burger.png"
+        },
+        {
+            "title": "Chicken Fillet Burger",
+            "priceM": 4.99,
+            "priceV": 6.99,
+            "ingredients": [
+                "deep-fried chicken fillet",
+                " brioche bun",
+                " bacon",
+                " mayonnaise",
+                " tomatoes",
+                " onions",
+                " iceberg lettuce"
+            ],
+            "src": "./img/chicken-fillet-burger.png"
+        }
+    ],
+    "logos": [
+        {
+            "alt": "Flame Video",
+            "src": "./fire.mp4"
+        },
+        {
+            "alt": "Burger Logo",
+            "src": "./img/burger-logo.png"
+        },
+        {
+            "alt": "Waffle Logo",
+            "src": "./img/waffle-logo.png"
+        },
+        {
+            "alt": "Sandwich Logo",
+            "src": "./img/sandwich-logo.png"
+        }
+    ],
+    "sandwich": [
+        {
+            "title": "Sausage Sandwich",
+            "price": "$4.99",
+            "ingredients": [
+                "100% beef",
+                " hot dog sausage",
+                " cream",
+                " butter",
+                " tomatoes",
+                " arugula",
+                " ginger"
+            ],
+            "src": "./img/hotdog-sandwich.png",
+            "alt": "Sausage Sandwich"
+        },
+        {
+            "title": "Ham Sandwich",
+            "price": "$3.99",
+            "ingredients": [
+                "100% ham",
+                " pork ham",
+                " sour cream",
+                " arugula",
+                " tomatoes",
+                " butter",
+                " ser mozzarella",
+                " ginger",
+                " paprika",
+                " olive"
+            ],
+            "src": "./img/ham-sandwich.png",
+            "alt": "Ham Sandwich"
+        },
+        {
+            "title": "Roast Sandwich",
+            "price": "$6.99",
+            "ingredients": [
+                "100% roast",
+                " iceberg salad",
+                " ginger",
+                " cream",
+                " tomatoes",
+                " butter"
+            ],
+            "src": "./img/roast-sandwich.png",
+            "alt": "Roast Sandwich"
+        }
+    ],
+    "waffles": [
+        {
+            "title": "Waffle with S",
+            "price": "$4.99",
+            "ingredients": [
+                "100% roast",
+                " iceberg salad",
+                " ginger",
+                " cream",
+                " tomatoes",
+                " butter"
+            ],
+            "src": "./img/waffle-strawberry.png",
+            "alt": "Waffle"
+        },
+        {
+            "title": "Waffle with H&B",
+            "price": "$3.99",
+            "ingredients": [
+                "100% roast",
+                " iceberg salad",
+                " ginger",
+                " cream",
+                " tomatoes",
+                " butter"
+            ],
+            "src": "./img/waffle-honey&butter.png",
+            "alt": "Waffle"
+        },
+        {
+            "title": "Waffle with B",
+            "price": "$3.99",
+            "ingredients": [
+                "100% roast",
+                " iceberg salad",
+                " ginger",
+                " cream",
+                " tomatoes",
+                " butter"
+            ],
+            "src": "./img/waffle-banana.png",
+            "alt": "Waffle"
+        }
+    ]
+}
