@@ -30,8 +30,10 @@ main.classList.add("main");
 imageDiv.classList.add("image");
 image1.classList.add("burger");
 product.classList.add("product");
+sizeM.setAttribute("id", "size-m");
 sliderPrice1.classList.add("meal-slider-price");
 upperPrice1.classList.add("upper-price");
+sizeL.setAttribute("id", "size-v");
 sliderPrice2.classList.add("meal-slider-price");
 upperPrice2.classList.add("upper-price");
 
