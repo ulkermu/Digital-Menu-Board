@@ -56,3 +56,13 @@ sliderPrice1.appendChild(medium);
 sliderPrice1.appendChild(upperPrice1);
 sliderPrice2.appendChild(large);
 sliderPrice2.appendChild(upperPrice2);
+
+// Add container to HTML
+function firstContainerAdd() {
+  document.body.appendChild(container);
+}
+
+// Remove container from HTML
+function firstContainerRemove() {
+  document.body.removeChild(container);
+}
