@@ -24,22 +24,15 @@ const upperPrice2 = document.createElement("div");
 container.classList.add("container");
 header.classList.add("header");
 title.classList.add("title");
-title.setAttribute("id", "meal-title");
 headerP.classList.add("header-p");
 spanContent.classList.add("content");
-spanContent.setAttribute("id", "meal-ingredients");
 main.classList.add("main");
 imageDiv.classList.add("image");
 image1.classList.add("burger");
-image1.setAttribute("id", "burger-img");
 product.classList.add("product");
-sizeM.setAttribute("id", "size-m");
 sliderPrice1.classList.add("meal-slider-price");
-medium.setAttribute("id", "m");
 upperPrice1.classList.add("upper-price");
-sizeL.setAttribute("id", "size-v");
 sliderPrice2.classList.add("meal-slider-price");
-large.setAttribute("id", "v");
 upperPrice2.classList.add("upper-price");
 
 // Layout - First Slide Contents
