@@ -82,8 +82,32 @@ logo.classList.add("logo");
 image2.classList.add("image2");
 overlay.classList.add("overlay");
 
-// Layout - Recess Slide Contents
+// Layout - Transition Slide Contents
 showcase.appendChild(video);
 showcase.appendChild(logo);
 showcase.appendChild(overlay);
 logo.appendChild(image2);
+
+// Transition Slide Add Function
+function transitionAdd() {
+  showcase.classList.remove("fade-out");
+  image2.src = `${data.logos[1].src}`;
+  video.src = `${data.logos[0].src}`;
+  video.muted = true;
+  video.autoplay = true;
+  video.loop = true;
+
+  document.body.appendChild(showcase);
+}
+
+// Transition Slide Remove Function
+function transitionRemove() {
+
+  const showcase = document.querySelector(".showcase");
+  showcase.classList.add("fade-out");
+  showcase.onanimationend = (e) => {
+    if (e.srcElement.classList.contains("fade-out")) {
+      document.body.removeChild(showcase);
+    }
+  };
+}
