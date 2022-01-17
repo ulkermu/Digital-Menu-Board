@@ -66,3 +66,24 @@ function firstContainerAdd() {
 function firstContainerRemove() {
   document.body.removeChild(container);
 }
+
+//* --------------- Transition Slide Contents ---------------
+// Create Elements
+const showcase = document.createElement("section");
+const video = document.createElement("video");
+const logo = document.createElement("div");
+const image2 = document.createElement("img");
+const overlay = document.createElement("div");
+
+// Settings Class and Content
+showcase.classList.add("showcase");
+video.classList.add("video");
+logo.classList.add("logo");
+image2.classList.add("image2");
+overlay.classList.add("overlay");
+
+// Layout - Recess Slide Contents
+showcase.appendChild(video);
+showcase.appendChild(logo);
+showcase.appendChild(overlay);
+logo.appendChild(image2);

@@ -56,14 +56,6 @@
         {
             "alt": "Burger Logo",
             "src": "./img/burger-logo.png"
-        },
-        {
-            "alt": "Waffle Logo",
-            "src": "./img/waffle-logo.png"
-        },
-        {
-            "alt": "Sandwich Logo",
-            "src": "./img/sandwich-logo.png"
         }
     ],
     "sandwich": [
