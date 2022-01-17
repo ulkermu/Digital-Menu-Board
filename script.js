@@ -2,6 +2,27 @@ import data from "./data.json" assert { type: "json" };
 
 const wait = (ms = 0) => new Promise((resolve) => setTimeout(resolve, ms));
 
+//* --------------- Transition Slide Contents ---------------
+// Create Elements
+const showcase = document.createElement("section");
+const video = document.createElement("video");
+const logo = document.createElement("div");
+const image2 = document.createElement("img");
+const overlay = document.createElement("div");
+
+// Settings Class and Content
+showcase.classList.add("showcase");
+video.classList.add("video");
+logo.classList.add("logo");
+image2.classList.add("image2");
+overlay.classList.add("overlay");
+
+// Layout - Transition Slide Contents
+showcase.appendChild(video);
+showcase.appendChild(logo);
+showcase.appendChild(overlay);
+logo.appendChild(image2);
+
 //* --------------- First Slide Contents ---------------
 // Create Elements
 const container = document.createElement("div");
@@ -61,36 +82,112 @@ sliderPrice1.appendChild(upperPrice1);
 sliderPrice2.appendChild(large);
 sliderPrice2.appendChild(upperPrice2);
 
-// Add container to HTML
-function firstContainerAdd() {
-  document.body.appendChild(container);
-}
-
-// Remove container from HTML
-function firstContainerRemove() {
-  document.body.removeChild(container);
-}
-
-//* --------------- Transition Slide Contents ---------------
+//* --------------- Second Slide Contents ---------------
 // Create Elements
-const showcase = document.createElement("section");
-const video = document.createElement("video");
-const logo = document.createElement("div");
-const image2 = document.createElement("img");
-const overlay = document.createElement("div");
+const container2 = document.createElement("div");
+const sepImgContain1 = document.createElement("div");
+const sepHeader1 = document.createElement("header");
+const sepMain1 = document.createElement("main");
+const sepFooter1 = document.createElement("footer");
+const title1 = document.createElement("div");
+const sepImgTitle1 = document.createElement("h1");
+const titleContents1 = document.createElement("div");
+const sepImgSpan1 = document.createElement("span");
+const sepImg1 = document.createElement("img");
+const sepPrice1 = document.createElement("div");
+const sepImgContain2 = document.createElement("div");
+const sepHeader2 = document.createElement("header");
+const sepMain2 = document.createElement("main");
+const sepFooter2 = document.createElement("footer");
+const title2 = document.createElement("div");
+const sepImgTitle2 = document.createElement("h1");
+const titleContents2 = document.createElement("div");
+const sepImgSpan2 = document.createElement("span");
+const sepImg2 = document.createElement("img");
+const sepPrice2 = document.createElement("div");
+const sepImgContain3 = document.createElement("div");
+const sepHeader3 = document.createElement("header");
+const sepMain3 = document.createElement("main");
+const sepFooter3 = document.createElement("footer");
+const title3 = document.createElement("div");
+const sepImgTitle3 = document.createElement("h1");
+const titleContents3 = document.createElement("div");
+const sepImgSpan3 = document.createElement("span");
+const sepImg3 = document.createElement("img");
+const sepPrice3 = document.createElement("div");
 
 // Settings Class and Content
-showcase.classList.add("showcase");
-video.classList.add("video");
-logo.classList.add("logo");
-image2.classList.add("image2");
-overlay.classList.add("overlay");
+container2.classList.add("container2");
+// First Contain
+sepImgContain1.classList.add("sepContain1");
+sepHeader1.classList.add("sepHeader");
+sepMain1.classList.add("sepMain");
+sepFooter1.classList.add("sepFooter");
+title1.classList.add("title2");
+sepImgTitle1.classList.add("sepImgTitle");
+titleContents1.classList.add("title-contents");
+sepImgSpan1.classList.add("sepImgSpan");
+sepImg1.classList.add("sepImg");
+sepPrice1.classList.add("price2");
+// Second Contain
+sepImgContain2.classList.add("sepContain2");
+sepHeader2.classList.add("sepHeader");
+sepMain2.classList.add("sepMain");
+sepFooter2.classList.add("sepFooter");
+title2.classList.add("title2");
+sepImgTitle2.classList.add("sepImgTitle");
+titleContents2.classList.add("title-contents");
+sepImgSpan2.classList.add("sepImgSpan");
+sepImg2.classList.add("sepImg");
+sepPrice2.classList.add("price2");
+// Third Contain
+sepImgContain3.classList.add("sepContain3");
+sepHeader3.classList.add("sepHeader");
+sepMain3.classList.add("sepMain");
+sepFooter3.classList.add("sepFooter");
+title3.classList.add("title2");
+sepImgTitle3.classList.add("sepImgTitle");
+titleContents3.classList.add("title-contents");
+sepImgSpan3.classList.add("sepImgSpan");
+sepImg3.classList.add("sepImg");
+sepPrice3.classList.add("price2");
 
-// Layout - Transition Slide Contents
-showcase.appendChild(video);
-showcase.appendChild(logo);
-showcase.appendChild(overlay);
-logo.appendChild(image2);
+// Layout - Second Slide Contents
+container2.appendChild(sepImgContain1);
+container2.appendChild(sepImgContain2);
+container2.appendChild(sepImgContain3);
+// First Contain
+sepImgContain1.appendChild(sepHeader1);
+sepImgContain1.appendChild(sepMain1);
+sepImgContain1.appendChild(sepFooter1);
+sepHeader1.appendChild(title1);
+sepHeader1.appendChild(titleContents1);
+title1.appendChild(sepImgTitle1);
+titleContents1.appendChild(sepImgSpan1);
+sepMain1.appendChild(sepImg1);
+sepFooter1.appendChild(sepPrice1);
+// Second Contain
+sepImgContain2.appendChild(sepHeader2);
+sepImgContain2.appendChild(sepMain2);
+sepImgContain2.appendChild(sepFooter2);
+sepHeader2.appendChild(title2);
+sepHeader2.appendChild(titleContents2);
+title2.appendChild(sepImgTitle2);
+titleContents2.appendChild(sepImgSpan2);
+sepMain2.appendChild(sepImg2);
+sepFooter2.appendChild(sepPrice2);
+// Third Contain
+sepImgContain3.appendChild(sepHeader3);
+sepImgContain3.appendChild(sepMain3);
+sepImgContain3.appendChild(sepFooter3);
+sepHeader3.appendChild(title3);
+sepHeader3.appendChild(titleContents3);
+title3.appendChild(sepImgTitle3);
+titleContents3.appendChild(sepImgSpan3);
+sepMain3.appendChild(sepImg3);
+sepFooter3.appendChild(sepPrice3);
+
+//* --------------- Slide Functions / Transition Slide ---------------
 
 // Transition Slide Add Function
 function transitionAdd() {
@@ -117,6 +214,16 @@ function transitionRemove() {
 }
 
 //* --------------- Slide Functions / First Slide ---------------
+// Add container to HTML
+function firstContainerAdd() {
+  document.body.appendChild(container);
+}
+
+// Remove container from HTML
+function firstContainerRemove() {
+  document.body.removeChild(container);
+}
+
 // Beef Burger Slide
 function beefSlide() {
   title.textContent = `${data.burgers[0].title}`;
