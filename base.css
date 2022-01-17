@@ -148,6 +148,29 @@ body {
     top: 5px;
 }
 
+.b-active {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition: all .6s ease-in-out;
+}
+
+.t-active {
+    transform: translateY(0) scale(1);
+    transition: all .6s ease-in-out;
+}
+
+.c-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all .6s ease-in-out;
+}
+
+.p-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all .6s ease-in-out;
+}
+
 /* ----------------------- Transition Slide ----------------------- */
 
 .showcase {

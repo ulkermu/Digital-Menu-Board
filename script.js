@@ -116,7 +116,31 @@ function transitionRemove() {
   };
 }
 
+//* --------------- Slide Functions / First Slide ---------------
+// Beef Burger Slide
+function beefSlide() {
+  title.textContent = `${data.burgers[0].title}`;
+  spanContent.textContent = `${data.burgers[0].ingredients}`;
+  medium.textContent = `${data.burgers[0].priceM}`;
+  large.textContent = `${data.burgers[0].priceV}`;
+  sizeM.textContent = "M (110g)";
+  sizeL.textContent = "L (170g)";
+  upperPrice1.textContent = "$";
+  upperPrice2.textContent = "$";
+  image1.src = `${data.burgers[0].src}`;
+  title.classList.add("t-active");
+  spanContent.classList.add("c-active");
+  image1.classList.add("b-active");
+  product.classList.add("p-active");
+}
 
+// Beef Burger Slide Remove
+function beefSlideRemove() {
+  title.classList.remove("t-active");
+  spanContent.classList.remove("c-active");
+  image1.classList.remove("b-active");
+  product.classList.remove("p-active");
+}
 
 //* --------------- Slide Show Function ---------------
 
@@ -129,6 +153,12 @@ async function slides() {
 
   firstContainerAdd();
   await wait(110);
+
+  beefSlide();
+  await wait(4000);
+
+  beefSlideRemove();
+  await wait(1200);
 }
 
 window.addEventListener("load", slides);
