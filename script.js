@@ -291,6 +291,16 @@ function chickenSlideRemove() {
   product.classList.remove("p-active");
 }
 
+//* --------------- Slide Functions / Second Slide ---------------
+
+function secondContainerAdd() {
+  document.body.appendChild(container2);
+}
+
+function secondContainerRemove() {
+  document.body.removeChild(container2);
+}
+
 //* --------------- Slide Show Function ---------------
 
 async function slides() {
@@ -329,6 +339,9 @@ async function slides() {
 
   transitionRemove();
   await wait(1100);
+
+  secondContainerAdd();
+  await wait(10);
 }
 
 window.addEventListener("load", slides);
