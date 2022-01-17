@@ -163,6 +163,27 @@ function grilledSlideRemove() {
   product.classList.remove("p-active");
 }
 
+// Chicken Burger Slide
+function chickenSlide() {
+  title.textContent = `${data.burgers[2].title}`;
+  spanContent.textContent = `${data.burgers[2].ingredients}`;
+  medium.textContent = `${data.burgers[2].priceM}`;
+  large.textContent = `${data.burgers[2].priceV}`;
+  image1.src = `${data.burgers[2].src}`;
+  title.classList.add("t-active");
+  spanContent.classList.add("c-active");
+  image1.classList.add("b-active");
+  product.classList.add("p-active");
+}
+
+// Chicken Burger Slide Remove
+function chickenSlideRemove() {
+  title.classList.remove("t-active");
+  spanContent.classList.remove("c-active");
+  image1.classList.remove("b-active");
+  product.classList.remove("p-active");
+}
+
 //* --------------- Slide Show Function ---------------
 
 async function slides() {
@@ -186,6 +207,21 @@ async function slides() {
 
   grilledSlideRemove();
   await wait(1200);
+
+  chickenSlide();
+  await wait(4000);
+
+  chickenSlideRemove();
+  await wait(600);
+
+  firstContainerRemove();
+  await wait(10);
+
+  transitionAdd();
+  await wait(4000);
+
+  transitionRemove();
+  await wait(1100);
 }
 
 window.addEventListener("load", slides);
