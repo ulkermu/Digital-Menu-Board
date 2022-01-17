@@ -142,6 +142,27 @@ function beefSlideRemove() {
   product.classList.remove("p-active");
 }
 
+// Grilled Burger Slide
+function grilledSlide() {
+  title.textContent = `${data.burgers[1].title}`;
+  spanContent.textContent = `${data.burgers[1].ingredients}`;
+  medium.textContent = `${data.burgers[1].priceM}`;
+  large.textContent = `${data.burgers[1].priceV}`;
+  image1.src = `${data.burgers[1].src}`;
+  title.classList.add("t-active");
+  spanContent.classList.add("c-active");
+  image1.classList.add("b-active");
+  product.classList.add("p-active");
+}
+
+// Grilled Burger Slide Remove
+function grilledSlideRemove() {
+  title.classList.remove("t-active");
+  spanContent.classList.remove("c-active");
+  image1.classList.remove("b-active");
+  product.classList.remove("p-active");
+}
+
 //* --------------- Slide Show Function ---------------
 
 async function slides() {
@@ -158,6 +179,12 @@ async function slides() {
   await wait(4000);
 
   beefSlideRemove();
+  await wait(1200);
+
+  grilledSlide();
+  await wait(4000);
+
+  grilledSlideRemove();
   await wait(1200);
 }
 
