@@ -187,3 +187,21 @@ body {
     width: 400px;
     height: 400px;
 }
+
+
+
+/* ----------------------- Animate ----------------------- */
+
+.fade-out {
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
