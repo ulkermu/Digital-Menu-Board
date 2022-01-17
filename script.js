@@ -1,3 +1,7 @@
+import data from "./data.json" assert { type: "json" };
+
+const wait = (ms = 0) => new Promise((resolve) => setTimeout(resolve, ms));
+
 //* --------------- First Slide Contents ---------------
 // Create Elements
 const container = document.createElement("div");
@@ -111,3 +115,20 @@ function transitionRemove() {
     }
   };
 }
+
+
+
+//* --------------- Slide Show Function ---------------
+
+async function slides() {
+  transitionAdd();
+  await wait(4000);
+
+  transitionRemove();
+  await wait(1000);
+
+  firstContainerAdd();
+  await wait(110);
+}
+
+window.addEventListener("load", slides);
