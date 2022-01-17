@@ -301,6 +301,37 @@ function secondContainerRemove() {
   document.body.removeChild(container2);
 }
 
+function sandwichSlideAdd() {
+  // Left Contain Contents
+  sepImgTitle1.textContent = `${data.sandwich[0].title}`;
+  sepImgSpan1.textContent = `${data.sandwich[0].ingredients}`;
+  sepImg1.src = `${data.sandwich[0].src}`;
+  sepImg1.alt = `${data.sandwich[0].alt}`;
+  sepPrice1.textContent = `${data.sandwich[0].price}`;
+  // Middle Contain Contents
+  sepImgTitle2.textContent = `${data.sandwich[1].title}`;
+  sepImgSpan2.textContent = `${data.sandwich[1].ingredients}`;
+  sepImg2.src = `${data.sandwich[1].src}`;
+  sepImg2.alt = `${data.sandwich[1].alt}`;
+  sepPrice2.textContent = `${data.sandwich[1].price}`;
+  // Right Contain Contents
+  sepImgTitle3.textContent = `${data.sandwich[2].title}`;
+  sepImgSpan3.textContent = `${data.sandwich[2].ingredients}`;
+  sepImg3.src = `${data.sandwich[2].src}`;
+  sepImg3.alt = `${data.sandwich[2].alt}`;
+  sepPrice3.textContent = `${data.sandwich[2].price}`;
+
+  sepImgContain1.classList.add("sepContain1-active");
+  sepImgContain2.classList.add("sepContain2-active");
+  sepImgContain3.classList.add("sepContain3-active");
+}
+
+function secondSlideShowRemove() {
+  sepImgContain1.classList.remove("sepContain1-active");
+  sepImgContain2.classList.remove("sepContain2-active");
+  sepImgContain3.classList.remove("sepContain3-active");
+}
+
 //* --------------- Slide Show Function ---------------
 
 async function slides() {
@@ -342,6 +373,12 @@ async function slides() {
 
   secondContainerAdd();
   await wait(10);
+
+  sandwichSlideAdd();
+  await wait(4000);
+
+  secondSlideShowRemove();
+  await wait(1100);
 }
 
 window.addEventListener("load", slides);
