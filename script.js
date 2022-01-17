@@ -214,12 +214,12 @@ function transitionRemove() {
 }
 
 //* --------------- Slide Functions / First Slide ---------------
-// Add container to HTML
+// Add first container to HTML
 function firstContainerAdd() {
   document.body.appendChild(container);
 }
 
-// Remove container from HTML
+// Remove first container from HTML
 function firstContainerRemove() {
   document.body.removeChild(container);
 }
@@ -292,11 +292,12 @@ function chickenSlideRemove() {
 }
 
 //* --------------- Slide Functions / Second Slide ---------------
-
+// Add second container to HTML
 function secondContainerAdd() {
   document.body.appendChild(container2);
 }
 
+// Remove second container from HTML
 function secondContainerRemove() {
   document.body.removeChild(container2);
 }
@@ -320,6 +321,31 @@ function sandwichSlideAdd() {
   sepImg3.src = `${data.sandwich[2].src}`;
   sepImg3.alt = `${data.sandwich[2].alt}`;
   sepPrice3.textContent = `${data.sandwich[2].price}`;
+
+  sepImgContain1.classList.add("sepContain1-active");
+  sepImgContain2.classList.add("sepContain2-active");
+  sepImgContain3.classList.add("sepContain3-active");
+}
+
+function dessertAdd() {
+  // Left Contain Contents
+  sepImgTitle1.textContent = `${data.waffles[0].title}`;
+  sepImgSpan1.textContent = `${data.waffles[0].ingredients}`;
+  sepImg1.src = `${data.waffles[0].src}`;
+  sepImg1.alt = `${data.waffles[0].alt}`;
+  sepPrice1.textContent = `${data.waffles[0].price}`;
+  // Middle Contain Contents
+  sepImgTitle2.textContent = `${data.waffles[1].title}`;
+  sepImgSpan2.textContent = `${data.waffles[1].ingredients}`;
+  sepImg2.src = `${data.waffles[1].src}`;
+  sepImg2.alt = `${data.waffles[1].alt}`;
+  sepPrice2.textContent = `${data.waffles[1].price}`;
+  // Right Contain Contents
+  sepImgTitle3.textContent = `${data.waffles[2].title}`;
+  sepImgSpan3.textContent = `${data.waffles[2].ingredients}`;
+  sepImg3.src = `${data.waffles[2].src}`;
+  sepImg3.alt = `${data.waffles[2].alt}`;
+  sepPrice3.textContent = `${data.waffles[2].price}`;
 
   sepImgContain1.classList.add("sepContain1-active");
   sepImgContain2.classList.add("sepContain2-active");
@@ -379,6 +405,27 @@ async function slides() {
 
   secondSlideShowRemove();
   await wait(1100);
+
+  secondContainerRemove();
+  await wait(500)
+
+  transitionAdd();
+  await wait(4000);
+
+  transitionRemove();
+  await wait(1100);
+
+  secondContainerAdd();
+  await wait(10)
+
+  dessertAdd();
+  await wait(4000);
+
+  secondSlideShowRemove();
+  await wait(1200);
+
+  secondContainerRemove();
+  await wait(0);
 }
 
 window.addEventListener("load", slides);
