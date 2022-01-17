@@ -80,14 +80,10 @@
             "ingredients": [
                 "100% ham",
                 " pork ham",
-                " sour cream",
-                " arugula",
                 " tomatoes",
                 " butter",
                 " ser mozzarella",
-                " ginger",
-                " paprika",
-                " olive"
+                " ginger"
             ],
             "src": "./img/ham-sandwich.png",
             "alt": "Ham Sandwich"

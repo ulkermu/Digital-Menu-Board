@@ -76,7 +76,7 @@ body {
         "header"
         "header-p"
         "main";
-    z-index: 1;
+    z-index: 1; 
 }
 
 .header {
@@ -214,6 +214,11 @@ body {
 /* ----------------------- Second Slide ----------------------- */
 
 .container2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
 }
 
@@ -224,8 +229,7 @@ body {
         "sepHeader"
         "sepMain"
         "sepFooter";
-    box-shadow: 2px 0px #888888;
-    border-right: 1px solid var(--secondaryText);
+    border-right: 1px solid gray;
     opacity: 0;
     transform: translateX(-100%);
     transition: all .7s ease-in-out;
@@ -238,8 +242,7 @@ body {
         "sepHeader"
         "sepMain"
         "sepFooter";
-    box-shadow: 2px 0px #888888;
-    border-right: 1px solid var(--secondaryText);
+    border-right: 1px solid gray;
     opacity: 0;
     transform: translateX(-140%);
     transition: all .8s ease-in-out;
@@ -252,8 +255,7 @@ body {
         "sepHeader"
         "sepMain"
         "sepFooter";
-    box-shadow: 2px 0px #888888;
-    border-right: 1px solid var(--secondaryText);
+    border-right: 1px solid gray;
     opacity: 0;
     transform: translateX(-180%);
     transition: all .9s ease-in-out;
@@ -280,7 +282,6 @@ body {
 .sepHeader {
     justify-content: center;
     grid-area: sepHeader;
-    height: 300px;
 }
 
 .title2 {
@@ -297,7 +298,6 @@ body {
 
 .sepMain {
     grid-area: sepMain;
-    height: 500px;
 }
 
 .sepImg {
@@ -308,14 +308,15 @@ body {
 
 .sepFooter {
     grid-area: sepFooter;
-    background-color: var(--primaryBackground);
-    height: 250px;
 }
 
 .price2 {
     text-align: center;
-    color: black;
-    font-size: 100px;
+    background-color: var(--primaryBackground);
+    height: 80%;
+    width: 100%;
+    color: var(--secondaryText);
+    font-size: 6rem;
 }
 
 /* ----------------------- Animate ----------------------- */
