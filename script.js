@@ -6,22 +6,19 @@ const wait = (ms = 0) => new Promise((resolve) => setTimeout(resolve, ms));
 // Create Elements
 const showcase = document.createElement("section");
 const video = document.createElement("video");
-const logo = document.createElement("div");
-const image2 = document.createElement("img");
+const logo = document.createElement("img");
 const overlay = document.createElement("div");
 
 // Settings Class and Content
 showcase.classList.add("showcase");
 video.classList.add("video");
 logo.classList.add("logo");
-image2.classList.add("image2");
 overlay.classList.add("overlay");
 
 // Layout - Transition Slide Contents
 showcase.appendChild(video);
 showcase.appendChild(logo);
 showcase.appendChild(overlay);
-logo.appendChild(image2);
 
 //* --------------- First Slide Contents ---------------
 // Create Elements
@@ -188,29 +185,49 @@ sepMain3.appendChild(sepImg3);
 sepFooter3.appendChild(sepPrice3);
 
 //* --------------- Slide Functions / Transition Slide ---------------
-
-// Transition Slide Add Function
-function transitionAdd() {
-  showcase.classList.remove("fade-out");
-  image2.src = `${data.logos[1].src}`;
+// Transition Fade Functions
+function transitionContentsAdd() {
+  logo.src = `${data.logos[1].src}`;
   video.src = `${data.logos[0].src}`;
   video.muted = true;
   video.autoplay = true;
   video.loop = true;
+  logo.classList.remove("fade-out");
+}
+function transitionOverlayAdd() {
+  overlay.classList.add("fade-in");
+}
+function transitionLogoAdd() {
+  overlay.classList.remove("fade-in");
+  logo.classList.add("fade-in");
+}
+function transitionLogoRemove() {
+  logo.classList.remove("fade-in");
+  logo.classList.add("fade-out");
+}
 
+// Transition Slide Add Function
+function transitionAdd() {
   document.body.appendChild(showcase);
+  video.classList.remove("fade-out");
+  transitionContentsAdd();
+  await wait(10);
+  
+  transitionOverlayAdd();
+  await wait(1000);
+  
+  transitionLogoAdd();
+  await wait(4000);
+  
+  transitionLogoRemove();
+  await wait(500);
 }
 
 // Transition Slide Remove Function
-function transitionRemove() {
-
-  const showcase = document.querySelector(".showcase");
-  showcase.classList.add("fade-out");
-  showcase.onanimationend = (e) => {
-    if (e.srcElement.classList.contains("fade-out")) {
-      document.body.removeChild(showcase);
-    }
-  };
+async function transitionRemove() {
+  video.classList.add('fade-out');
+  await wait(1000);
+  document.body.removeChild(showcase);
 }
 
 //* --------------- Slide Functions / First Slide ---------------
