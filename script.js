@@ -379,7 +379,7 @@ function secondSlideShowRemove() {
 
 async function slides() {
   transitionAdd();
-  await wait(4000);
+  await wait(7000);
 
   transitionRemove();
   await wait(1000);
@@ -388,28 +388,28 @@ async function slides() {
   await wait(110);
 
   beefSlide();
-  await wait(4000);
+  await wait(5000);
 
   beefSlideRemove();
   await wait(1200);
 
   grilledSlide();
-  await wait(4000);
+  await wait(5000);
 
   grilledSlideRemove();
   await wait(1200);
 
   chickenSlide();
-  await wait(4000);
+  await wait(5000);
 
   chickenSlideRemove();
   await wait(600);
 
   firstContainerRemove();
-  await wait(10);
+  await wait(1010);
 
   transitionAdd();
-  await wait(4000);
+  await wait(7000);
 
   transitionRemove();
   await wait(1100);
@@ -418,16 +418,16 @@ async function slides() {
   await wait(10);
 
   sandwichSlideAdd();
-  await wait(4000);
+  await wait(5000);
 
   secondSlideShowRemove();
   await wait(1100);
 
   secondContainerRemove();
-  await wait(500)
+  await wait(1010)
 
   transitionAdd();
-  await wait(4000);
+  await wait(7000);
 
   transitionRemove();
   await wait(1100);
@@ -436,13 +436,13 @@ async function slides() {
   await wait(10)
 
   dessertAdd();
-  await wait(4000);
+  await wait(5000);
 
   secondSlideShowRemove();
   await wait(1200);
 
   secondContainerRemove();
-  await wait(0);
+  await wait(10);
 }
 
 window.addEventListener("load", slides);
