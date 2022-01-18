@@ -207,7 +207,7 @@ function transitionLogoRemove() {
 }
 
 // Transition Slide Add Function
-function transitionAdd() {
+async function transitionAdd() {
   document.body.appendChild(showcase);
   video.classList.remove("fade-out");
   transitionContentsAdd();
